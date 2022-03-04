@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "powerline_symbol": "\ue62a",
+      "segments": [
+        {
+          "foreground": "#df3f3f",
+          "properties": {
+            "template": "{{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} "
+          },
+          "style": "powerline",
+          "type": "session"
+        },
+        {
+            "type": "az",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#000000",
+            "background": "#9ec3f0",
+            "properties": {
+              "template": " \uFD03 {{ .EnvironmentName }}"
+            }
+        },
+        {
+          "foreground": "#62ED8B",
+          "properties": {
+            "template": "\u279c"
+          },
+          "style": "plain",
+          "type": "text"
+        },
+        {
+          "foreground": "#56B6C2",
+          "properties": {
+            "style": "folder",
+            "template": " {{ .Path }}"
+          },
+          "style": "plain",
+          "type": "path"
+        },
+        {
+          "foreground": "#D4AAFC",
+          "properties": {
+            "branch_icon": "",
+            "template": " <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>"
+          },
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "foreground": "#DCB977",
+          "properties": {
+            "template": " \uf119"
+          },
+          "style": "plain",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 1
+}
